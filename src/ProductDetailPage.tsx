@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'motion/react';
+import { ProductImage } from './components/ProductImage';
 import { ChevronLeft, Truck, ShieldCheck, RotateCcw, Star } from 'lucide-react';
 
 export function ProductDetailPage() {
@@ -42,21 +43,19 @@ export function ProductDetailPage() {
             className="space-y-4"
           >
             <div className="aspect-[4/5] bg-slate-100 overflow-hidden">
-              <img 
+              <ProductImage 
                 src={product.image} 
                 alt={product.name} 
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map(i => (
                 <div key={i} className="aspect-square bg-slate-100 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
-                   <img 
+                   <ProductImage 
                     src={product.image} 
                     alt={`${product.name} view ${i}`} 
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
               ))}

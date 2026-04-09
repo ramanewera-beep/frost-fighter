@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'motion/react';
+import { ProductImage } from './components/ProductImage';
 import { ChevronRight, Filter } from 'lucide-react';
 
 const Hero = () => (
@@ -56,11 +57,10 @@ const ProductCard = ({ product }: { product: Product }) => {
       <Card className="group border-none shadow-none rounded-none overflow-hidden">
         <Link to={`/product/${product.id}`}>
           <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
-            <img 
+            <ProductImage 
               src={product.image} 
               alt={product.name} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute top-4 left-4">
               <Badge className="bg-white/90 text-black hover:bg-white/90 rounded-none border-none uppercase text-[10px] tracking-widest px-3">

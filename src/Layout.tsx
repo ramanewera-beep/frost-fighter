@@ -42,18 +42,19 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="hidden sm:flex">
+          <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-md hover:bg-slate-100 cursor-pointer transition-colors">
             <Search className="h-5 w-5" />
-          </Button>
-          <Link to="/cart">
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingBag className="h-5 w-5" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-accent text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </Button>
+          </div>
+          <Link 
+            to="/cart"
+            className="relative inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-slate-100 transition-colors"
+          >
+            <ShoppingBag className="h-5 w-5" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-accent text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
           </Link>
         </div>
       </div>

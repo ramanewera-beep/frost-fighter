@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { Button } from '@/components/ui/button';
+import { ProductImage } from './components/ProductImage';
 import { Separator } from '@/components/ui/separator';
 import { Trash2, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -47,11 +48,10 @@ export function CartPage() {
                 className="flex flex-col sm:flex-row gap-6 pb-8 border-b"
               >
                 <div className="w-full sm:w-40 aspect-square bg-slate-100 overflow-hidden">
-                  <img 
+                  <ProductImage 
                     src={item.image} 
                     alt={item.name} 
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="flex-1 space-y-4">
