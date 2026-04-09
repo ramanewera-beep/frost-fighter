@@ -51,7 +51,7 @@ export function ProductDetailPage() {
             </div>
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map(i => (
-                <div key={i} className="aspect-square bg-slate-100 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
+                <div key={i} className="aspect-square bg-slate-100 opacity-100 cursor-pointer transition-opacity">
                    <ProductImage 
                     src={product.image} 
                     alt={`${product.name} view ${i}`} 

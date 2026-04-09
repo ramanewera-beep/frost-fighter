@@ -7,6 +7,8 @@ import { CartPage } from './CartPage';
 import { CheckoutPage } from './CheckoutPage';
 import { ContactPage } from './ContactPage';
 import { SupportPage } from './SupportPage';
+import { AboutPage } from './AboutPage';
+import { TechnologyPage } from './TechnologyPage';
 import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/support" element={<SupportPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/technology" element={<TechnologyPage />} />
             </Routes>
           </main>
           <Footer />

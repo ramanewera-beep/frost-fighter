@@ -22,10 +22,11 @@ export function Navbar() {
             />
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 mt-8">
-                <Link to="/" className="text-lg font-serif hover:text-accent transition-colors">Home</Link>
                 <Link to="/" className="text-lg font-serif hover:text-accent transition-colors">Snowblowers</Link>
+                <Link to="/technology" className="text-lg font-serif hover:text-accent transition-colors">Technology</Link>
                 <Link to="/contact" className="text-lg font-serif hover:text-accent transition-colors">Contact Us</Link>
                 <Link to="/support" className="text-lg font-serif hover:text-accent transition-colors">Support</Link>
+                <Link to="/about" className="text-lg font-serif hover:text-accent transition-colors">About</Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -36,8 +37,10 @@ export function Navbar() {
 
           <nav className="hidden lg:flex items-center gap-8">
             <Link to="/" className="text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors">Snowblowers</Link>
+            <Link to="/technology" className="text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors">Technology</Link>
             <Link to="/contact" className="text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors">Contact Us</Link>
             <Link to="/support" className="text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors">Support</Link>
+            <Link to="/about" className="text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors">About</Link>
           </nav>
         </div>
 
